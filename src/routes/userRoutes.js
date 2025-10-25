@@ -5,6 +5,10 @@ const authMiddleware = require('../middleware/authMiddleware');
 
 const router = express.Router();
 
+router.get('/test', (req, res) => {
+    res.json({ message: 'Server is running!' });
+});
+
 router.post('/register', registerUser);
 router.post('/login', loginUser);
 
